@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro | QuimiTECH</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bem-vindo de volta!</h2>
+        <form id="login-form">
+            <div class="area-texto">
+                <input type="email" id="email" name="ds_email" placeholder="Endereço de email" required>
+                <input type="password" id="senha" name="ds_senha" placeholder="Senha" required>
+            </div>
+            <div class="btn-continuar">
+                <button type="submit">Continuar</button>
+            </div>
+        </form>
+        <div class="cadastro-link">
+            <h3>Não possui conta? <a href="#">Cadastre-se</a></h3>
+        </div>
+        <hr class="divisor"></hr>
+        <div class="btn-entrarcom">
+            <a href="cadastro.html"><button>Entrar com Google</button></a>
+            <button>Entrar com Placeholder</button>
+            <button>Entrar com Placeholder</button>
+        </div>
+    </div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+</style>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ds_email: email, ds_senha: senha })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert(data.message);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Erro ao fazer login!');
+        });
+    });
+
+    document.getElementById('register-link').addEventListener('click', function() {
+        document.getElementById('register-modal').style.display = 'block';
+    });
+
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const usuario = document.getElementById('usuario').value;
+        const email = document.getElementById('email-register').value;
+        const senha = document.getElementById('senha-register').value;
+
+        fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ds_nome: nome, ds_usuario: usuario, ds_email: email, ds_senha: senha })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert(data.message);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Erro ao registrar!');
+        });
+    });
+</script>
+</html>

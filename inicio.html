@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QuimiTECH</title>
+    <link rel="stylesheet" type="text/css" href="inicio.css" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <div class="content">
+        <!-- Conteúdo da página -->
+    </div>
+    <footer class="footer">
+        <p>© 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div>
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+                    <span class="txt-link">Chat</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-ui-checks"></i></span>
+                    <span class="txt-link">Tabela</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-trash2-fill"></i></span>
+                    <span class="txt-link">Misturas</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header id="header">
+        <div class="container">
+            <img src="imagens/negocinho.png"alt="icon" width="60">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                </ul>
+            </nav>
+            <div class="btn-cadastro">
+                <a href="cadastro.html""><button>CADASTRE-SE</button></a>
+            </div>
+            <div class="btn-login">
+                <a href="login.html"><button>LOGIN</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <section class="carousel">
+            <div class="carousel-images" id="carouselImages">
+                <img src="imagens/ceu.png"alt="CÉU">
+                <img src="imagens/RESPIRE.jpeg" alt="RESPIRE">
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-5)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
+        <section class="content-section">
+            <h2>Bem-vindo à QuimiTECH</h2>
+            <p>Aqui, você encontrará dicas práticas e informações essenciais para manter sua casa sempre limpa e organizada. 
+                Nosso objetivo é ajudá-lo a entender melhor como os produtos de limpeza funcionam e como usá-los de forma eficaz e segura.
+                No nosso cotidiano, a química está presente em muitas atividades, especialmente na limpeza. 
+                Vamos explorar juntos como as misturas e reações químicas ocorrem com os produtos que usamos diariamente. 
+                Você aprenderá sobre a composição de desinfetantes, detergentes, alvejantes e muitos outros produtos, além de como combiná-los (ou não) para obter os melhores resultados.
+                Descubra curiosidades, desmistifique mitos e aprenda truques simples que podem fazer toda a diferença na sua rotina de limpeza. 
+                Estamos aqui para tornar sua vida mais prática e informada, garantindo um ambiente limpo e seguro para você e sua família. Aproveite a visita e boas descobertas!</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Quem somos?</h2>
+            <div class="campo">
+                <div class="perfil-imagem"
+                    style="background-image: url('https://eafo4yv2hbx.exactdn.com/wp-content/uploads/2022/04/one-piece-zoro.jpg?strip=all&lossy=1&ssl=1');">
+                </div>
+                <div>
+                    <div class="perfil-info">
+                        <h2>Nome: Zoro</h2>
+                        <p>Email: fulano@example.com</p>
+                        <p>Telefone: (00) 12345-6789</p>
+                    </div>
+                    <div class="mini-texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper magna et fermentum
+                            porttitor. Sed dapibus aliquam enim, eu convallis libero varius sit amet. Phasellus at elit eu
+                            tellus tincidunt rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campo">
+                <div class="perfil-imagem"
+                    style="background-image: url('https://img.assinaja.com/upl/lojas/mundosinfinitos/imagens/foto-one-piece.png');">
+                </div>
+                <div>
+                    <div class="perfil-info">
+                        <h2>Nome: Luffy</h2>
+                        <p>Email: fulano@example.com</p>
+                        <p>Telefone: (00) 12345-6789</p>
+                    </div>
+                    <div class="mini-texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper magna et fermentum
+                            porttitor. Sed dapibus aliquam enim, eu convallis libero varius sit amet. Phasellus at elit eu
+                            tellus tincidunt rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campo">
+                <div class="perfil-imagem"
+                    style="background-image: url('https://eafo4yv2hbx.exactdn.com/wp-content/uploads/2023/03/one-piece-sanji.jpg?strip=all&lossy=1&ssl=1');">
+                </div>
+                <div>
+                    <div class="perfil-info">
+                        <h2>Nome: Sanji</h2>
+                        <p>Email: fulano@example.com</p>
+                        <p>Telefone: (00) 12345-6789</p>
+                    </div>
+                    <div class="mini-texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper magna et fermentum
+                            porttitor. Sed dapibus aliquam enim, eu convallis libero varius sit amet. Phasellus at elit eu
+                            tellus tincidunt rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campo">
+                <div class="perfil-imagem"
+                    style="background-image: url('https://sm.ign.com/ign_br/screenshot/default/usopp-cosplay-one-piece_tg7r.jpg');">
+                </div>
+                <div>
+                    <div class="perfil-info">
+                        <h2>Nome: Ussop</h2>
+                        <p>Email: fulano@example.com</p>
+                        <p>Telefone: (00) 12345-6789</p>
+                    </div>
+                    <div class="mini-texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper magna et fermentum
+                            porttitor. Sed dapibus aliquam enim, eu convallis libero varius sit amet. Phasellus at elit eu
+                            tellus tincidunt rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campo">
+                <div class="perfil-imagem"
+                    style="background-image: url('https://staticg.sportskeeda.com/editor/2023/05/50b87-16836967920057-1920.jpg?w=640');">
+                </div>
+                <div>
+                    <div class="perfil-info">
+                        <h2>Nome: Franky</h2>
+                        <p>Email: fulano@example.com</p>
+                        <p>Telefone: (00) 12345-6789</p>
+                    </div>
+                    <div class="mini-texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper magna et fermentum
+                            porttitor. Sed dapibus aliquam enim, eu convallis libero varius sit amet. Phasellus at elit eu
+                            tellus tincidunt rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campo">
+                <div class="perfil-imagem"
+                    style="background-image: url('https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=1200,height=675,quality=70/catalog/crunchyroll/2c1c983100e7df5b55e16d6541291ab2.jpe');">
+                </div>
+                <div>
+                    <div class="perfil-info">
+                        <h2>Nome: Jinbe</h2>
+                        <p>Email: fulano@example.com</p>
+                        <p>Telefone: (00) 12345-6789</p>
+                    </div>
+                    <div class="mini-texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper magna et fermentum
+                            porttitor. Sed dapibus aliquam enim, eu convallis libero varius sit amet. Phasellus at elit eu
+                            tellus tincidunt rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Contato</h2>
+            <p>Para mais informações, entre em contato conosco através do e-mail: contato@quimitech.com ou pelo telefone (11) 1234-5678.</p>
+        </section>
+    </div>
+    <script src="./inicio.js"></script>
+
+</body>
+
+</html>

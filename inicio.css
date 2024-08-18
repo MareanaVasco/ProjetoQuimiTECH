@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+        .banner {
+          background-image: url(IMAGENS/banner\ \(1\).jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100vh;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            font-family: Zilla Slab;
+        }
+
+        /* MENU LATERAL */
+        .menu-lateral {
+            width: 75px;
+            height: 100vh;
+            background-color: #009185;
+            padding: 40px 0 40px 1%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            transition: .5s;
+            z-index: 1000;
+        }
+
+        .menu-lateral.expandir {
+            width: 220px;
+        }
+
+        .btn-expandir {
+            width: 100%;
+            padding-left: 10px;
+            margin-left: 7px;
+        }
+
+        .btn-expandir i {
+            color: black;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        ul {
+            height: 100%;
+            list-style-type: none;
+            margin-top: 26px;
+        }
+
+        ul li.item-menu a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 20px 4%;
+            display: flex;
+            margin-bottom: 20px;
+            line-height: 40px;
+        }
+
+        ul li.item-menu a .txt-link {
+            margin-left: 70px;
+            white-space: nowrap;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        .menu-lateral.expandir .txt-link {
+            margin-left: 40px;
+            opacity: 1;
+        }
+
+        ul li.item-menu a .icon>i {
+            font-size: 30px;
+            margin-left: 10px;
+        }
+
+        ul li.item-menu:hover {
+            background-color: rgb(59, 118, 158);
+        }
+
+        ul li.item-menu {
+            transition: .2s;
+        }
+
+        ul li.ativo {
+            background-color: rgb(59, 118, 158);
+        }
+
+        /* BARRA SUPERIOR */
+        header {
+            width: calc(100% - 75px);
+            padding: 40px 0;
+            position: fixed;
+            top: 0;
+            left: 75px;
+            transition: background-color 0.3s, left 0.6s, width 0.6s;
+            background-color:#009185;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            z-index: 999;
+        }
+
+        .menu-lateral.expandir ~ header {
+            left: 220px;
+            width: calc(100% - 220px);
+        }
+
+        header.rolagem {
+            background-color: rgba(33, 93, 128, 0.8); /* Cor alterada quando rolar */
+        }
+
+        header .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 40px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-cadastro button,
+        .btn-login button {
+            width: 120px;
+            height: 40px;
+            border: 0;
+            background-color: #10A37F;
+            border-radius: 10px;
+            color: aliceblue;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-cadastro button:hover,
+        .btn-login button:hover {
+            background-color: rgb(78, 152, 216);
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+        .main-content {
+            margin-left: 75px;
+            margin-top: 100px; /* Ajuste para abaixo da barra superior */
+            padding: 20px;
+            width: calc(100% - 75px);
+            transition: margin-left 0.5s, width 0.5s;
+        }
+
+        .menu-lateral.expandir ~ .main-content {
+            margin-left: 220px;
+            width: calc(100% - 220px);
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            border: 0;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(42, 112, 161, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .content-section {
+            margin: 50px 0;
+        }
+
+        .content-section h2 {
+            text-align: center;
+        }
+
+        .content-section p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+    /* SOBRE NÓS */
+
+        .campo {
+            display: flex;
+            align-items: center;
+            margin: 40px 20px;
+            /* margem externa */
+            border: 2px solid black;
+            /* borda sólida preta */
+            padding: 20px;
+            /* espaçamento interno */
+            background-color: white;
+            /* cor de fundo */
+            border-radius: 10px;
+            /* borda arredondada */
+        }
+        
+        .perfil-imagem {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #000;
+            /* borda sólida preta */
+            border-radius: 50%;
+            /* borda arredondada */
+            overflow: hidden;
+            /* oculta conteúdo que ultrapassa o tamanho */
+            background-size: cover;
+            /* redimensiona a imagem de fundo para cobrir todo o campo */
+            background-position: center;
+            /* centraliza a imagem de fundo */
+        }
+        
+        .perfil-info {
+            margin-left: 20px;
+            /* margem esquerda */
+        }
+        
+        .mini-texto {
+            margin-top: 20px;
+            /* margem de cima */
+            margin-left: 20px;
+            /* margem esquerda */
+        }
+        
+        html {
+            height: 100%;
+            width: 100%;
+          }
+
+/* rodapé */
+
+.content {
+    min-height: calc(100vh - 50px); /* Ajusta o tamanho do conteúdo para não cobrir o rodapé */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 35px;
+}
